@@ -36,7 +36,8 @@ function App() {
     setButtonMessage("Sending...");
     setSubmitDisabled(true);
     setTimeout(() => {
-      sendSlackMessage(slackMessage, slackHookURL);
+      const formattedMessage = `From James Nikko Seva's Slack Bot: ${slackMessage}`;
+      sendSlackMessage(formattedMessage, slackHookURL);
       setButtonMessage("Sent!");
       setSubmitDisabled(false);
 
