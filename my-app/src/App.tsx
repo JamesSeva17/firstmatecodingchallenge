@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { sendMessage } from "./api";
-
+import "./App.css";
 
 function App() {
   const [delayInput, setDelayInput] = useState(0);
