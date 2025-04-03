@@ -44,18 +44,15 @@
   color: #888;
 }
 
-.form-container {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Full viewport height */
+  margin: 0;
+  background-color: #f1f1f1;
+  /* Optional background */
 }
 
 form {
@@ -68,8 +65,10 @@ label {
   margin-bottom: 5px;
 }
 
+
 input,
-textarea {
+textarea,
+select {
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
