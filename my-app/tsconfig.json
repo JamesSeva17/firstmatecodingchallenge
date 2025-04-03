@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ESNext", // Ensure ES modules
+    "target": "ESNext", // Modern JavaScript
+    "moduleResolution": "node", // Resolve modules like Node.js
+    "strict": true,
+    "esModuleInterop": true, // Allow importing CommonJS modules
+    "skipLibCheck": true
+  },
+  "include": [
+    "api/**/*",
+    "src/**/*"
+  ],
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
