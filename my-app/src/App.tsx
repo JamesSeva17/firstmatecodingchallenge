@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { sendMessage } from "./api";
 
+
 function App() {
   const [delayInput, setDelayInput] = useState(0);
   const [delayUnit, setDelayUnit] = useState("");
@@ -64,24 +65,38 @@ function App() {
   return (
 
     <>
-      <div className="home">
-        <h1>First Mate Coding Challenge</h1>
 
-        <div className="coding-challenge">
-          <form className="coding-challenge-form" onSubmit={onSubmit}>
-            Delay input: <input type="number" placeholder="Enter delay amount" className="" name="delayInput" onChange={(e) => setDelayInput(+e.target.value)} />
-            Delay unit: <select name="delayUnit" className="" onChange={(e) => setDelayUnit(e.target.value)}>
+
+
+      <div className="form-container">
+        <h1>First Mate Coding Challenge</h1>
+        <form onSubmit={onSubmit}>
+          <div>
+            <label>Delay input:</label>
+            <input type="number" placeholder="Enter delay amount" className="" name="delayInput" onChange={(e) => setDelayInput(+e.target.value)} />
+          </div>
+          <div>
+            <label>Delay unit:</label>
+            <select name="delayUnit" className="" onChange={(e) => setDelayUnit(e.target.value)}>
               <option value="">Select delay unit</option>
               <option value="seconds">Seconds</option>
               <option value="minutes">Minutes</option>
               <option value="hours">Hours</option>
             </select>
-            Slack Message input: <input type="text" placeholder="Enter your message" className="" name="messageInput" onChange={(e) => setSlackMessage(e.target.value)} />
-            Slack Hook URL input: <input type="text" placeholder="Enter your slack hook URL" className="" name="slackHookInput" onChange={(e) => setSlackHookURL(e.target.value)} />
-            <button type="submit" className="submit-button" disabled={isSubmitDisabled}>{buttonMessage} </button>
-          </form>
-        </div>
+          </div>
+          <div>
+            <label>Slack Message input:</label>
+            <input type="text" placeholder="Enter your message" className="" name="messageInput" onChange={(e) => setSlackMessage(e.target.value)} />
+          </div>
+          <div>
+            <label>Slack Hook URL input:</label>
+            <input type="text" placeholder="Enter your slack hook URL" className="" name="slackHookInput" onChange={(e) => setSlackHookURL(e.target.value)} />
+          </div>
+
+          <button type="submit" className="submit-button" disabled={isSubmitDisabled}>{buttonMessage} </button>
+        </form>
       </div>
+
     </>
   );
 }
