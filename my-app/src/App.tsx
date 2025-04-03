@@ -69,7 +69,7 @@ function App() {
 
       <div className="App">
         <div className="form-container">
-          <h1>First Mate Coding Challenge</h1>
+          <h1>First Mate Technologies Coding Challenge</h1>
           <form onSubmit={onSubmit}>
             <div>
               <label>Delay input:</label>
